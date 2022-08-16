@@ -1,5 +1,9 @@
 # 06-Weather-Dashboard
 
+## NOTE:
+In order to run this application, you will need to use your own API key generated from OpenWeather API website.
+Once you download the files, rename the [sample-config.js](./assets/js/sample-config.js) to config.js, and paste your API key into the area indicated in the code.
+
 ## Challenge User Story
 
 ```
@@ -30,7 +34,7 @@ I will create an application that fulfils the requirements above. The code will 
 * [Google Fonts](https://fonts.google.com/) for custom fonts that don't require installation
 * [jQuery](https://api.jquery.com/) for dynamic rendering of the html content based on user interaction
 * [Moment.js](https://momentjs.com/) for time and date related manipulations
-* [OpenWeather On Call API](https://openweathermap.org/api/one-call-api) for city weather data.
+* [OpenWeather One Call API](https://openweathermap.org/api/one-call-api) for city weather data.
 * [Font Awesome](https://fontawesome.com/docs/web/) for access to their icon library.
 
 ## Grading Requirements
@@ -87,10 +91,10 @@ You are required to submit BOTH of the following for review:
 
 The following image shows the web application's appearance and functionality:
 
-![James Li workday planner](./assets/06-weather-dashboard-screenshot.png)
+![James Li Weather Dashboard](./assets/06-weather-dashboard-screenshot.png)
 
 ## Application Link
 
 The following is a link to the deployed application in GitHub pages.
 
-[James Li Challenge 06: 3rd Party APIs](https://jimjamlee.github.io/06-Weather-Dashboard/)
+[James Li Challenge 06: Server Side APIs](https://jimjamlee.github.io/06-Weather-Dashboard/)

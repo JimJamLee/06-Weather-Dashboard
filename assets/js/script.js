@@ -12,11 +12,9 @@ var currentUvEl = document.getElementById("current-uv");
 var fivedayEl = document.getElementById("forecast-header");
 var historyEl = document.getElementById("search-history");
 
-const APIKey = "84b79da5e5d7c92085660485702f4ce8";
-
 function getWeather(cityName) {
     // Execute a current weather get request from open weather api
-    var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&units=imperial&appid=" + APIKey;
+    var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&units=imperial&appid=" + `${api.key}`;
     $.ajax({
         url: queryURL,
         method: "GET"
@@ -47,7 +45,7 @@ function getWeather(cityName) {
             // Get UV Index
             var lat = response.coord.lat;
             var lon = response.coord.lon;
-            var UVQueryURL = "https://api.openweathermap.org/data/2.5/uvi/forecast?lat=" + lat + "&lon=" + lon + "&units=imperial&appid=" + APIKey + "&cnt=1";
+            var UVQueryURL = "https://api.openweathermap.org/data/2.5/uvi/forecast?lat=" + lat + "&lon=" + lon + "&units=imperial&appid=" + `${api.key}` + "&cnt=1";
             $.ajax({
                 url: UVQueryURL,
                 method:"GET"
@@ -76,7 +74,7 @@ function getWeather(cityName) {
             
             // Get 5 day forecast for this city
             var cityID = response.id;
-            var forecastQueryURL = "https://api.openweathermap.org/data/2.5/forecast?id=" + cityID + "&units=imperial&appid=" + APIKey;
+            var forecastQueryURL = "https://api.openweathermap.org/data/2.5/forecast?id=" + cityID + "&units=imperial&appid=" + `${api.key}`;
             $.ajax({
                 url: forecastQueryURL,
                 method:"GET"
