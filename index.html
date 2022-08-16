@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <title>Weather Dashboard</title>
+</head>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+
+    <header class="container-fluid text-center text-white bg-dark p-2">
+        <h1>Weather Dashboard</h1>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3 bg-light">
+                <h5 class="mt-1">Search for a City:</h5>
+                <div class="input-group mb-3">
+                    <input id="city-input" type="text" class="form-control" placeholder="Enter a city" aria-label="Enter a city">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="button" id="search-btn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+                <button class="btn btn-primary mb-3" type="button" id="clear-history-btn">Clear history</button>
+                <form id="search-history"></form>
+            </div>
+
+            <div class="col-lg-9">
+                <div class="row">
+                    <div class="col-lg card m-3 d-none" id="current-weather">
+                        <div class="card-body">
+                            <h3 id="city-name" class="city-name align-middle">City</h3>
+                            <img src="" alt="" id="current-icon">
+                            <p class="card-text" id="current-temp">F</p>
+                            <p class="card-text" id="current-humidity">%</p>
+                            <p class="card-text" id="current-wind">MPH</p>
+                            <p class="card-text" id="current-uv">Index</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" id="forecast-header">
+                    <div class="col-12 d-none">
+                        <h3>5-Day Forecast</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2 forecast bg-primary text-white m-2 rounded"></div>
+                    <div class="col-md-2 forecast bg-primary text-white m-2 rounded"></div>
+                    <div class="col-md-2 forecast bg-primary text-white m-2 rounded"></div>
+                    <div class="col-md-2 forecast bg-primary text-white m-2 rounded"></div>
+                    <div class="col-md-2 forecast bg-primary text-white m-2 rounded"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+
+</body>
+</html>
